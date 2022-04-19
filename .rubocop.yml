@@ -1,0 +1,29 @@
+# require: rubocop-jekyll
+# inherit_gem:
+#  rubocop-jekyll: .rubocop.yml
+
+AllCops:
+  Exclude:
+      - vendor/**/*
+      - Gemfile*
+      - '*.gemspec' # This does nothing. Why?
+  NewCops: enable
+  TargetRubyVersion: 2.6
+
+# Jekyll/NoPutsAllowed:
+#   Enabled: false
+
+# Gemspec/RequireMFA:
+#   Enabled: false
+
+Layout/LineLength:
+  Max: 150
+
+Style/StringLiterals:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 40
+
+Metrics/ModuleLength:
+  Enabled: false
