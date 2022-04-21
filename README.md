@@ -2,20 +2,8 @@
 [![Gem Version](https://badge.fury.io/rb/jekyll_plugin_pdf.svg)](https://badge.fury.io/rb/jekyll_plugin_pdf)
 ===========
 
-`jekyll_plugin_pdf` is a Jekyll plugin that provides a new Liquid tag called `new_tag_name` and a new tag block called `new_tag_block_name`.
+`jekyll_plugin_pdf` is a Jekyll plugin that converts the HTML pages to a PDF document.
 The plugin is packaged as a Ruby gem.
-
- * A `new_tag_block_name` block tag that can do magic with its eyes closed.
-   ```
-   {% new_tag_name [arguments] %}
-   Contents of new_tag_block_name
-   {% endnew_tag_name %}
-   ```
- * A `new_tag_name` tag that can turn on a dime and leave 15 cents change.
-   ```
-   {% new_tag_name Contents of new_tag_name tag%}
-   ```
-
 
 ## Demo
 The `demo` directory contains a small Jekyll website pre-configured for instant gratification.
@@ -86,36 +74,6 @@ Or install it yourself as:
     $ gem install jekyll_plugin_pdf
 
 
-## Usage
-
-Given this markup in an HTML file:
-
-```
-{% block_tag_template param1="Today is a wonderful day!" %}
-Hello, world!
-{% endblock_tag_template %}
-The rendered HTML from the block tag looks like this:
-```
-
-<p style="color: green; background-color: yellow; padding: 1em; border: solid thin grey;">Hello, world! Today is a wonderful day!</p>
-
-Console output looks like this, when the plugin's log level is set to `debug`:
-```
-DEBUG MyBlock: tag_name = 'block_tag_template'
-argument_string = 'param1="Today is a wonderful day!" '
-@param1 = 'Today is a wonderful day!'
-@param_x = ''
-params =
-  param1 = Today is a wonderful day!
-  param2 =
-  param3 =
-
-DEBUG MyBlock: mode=""
-page.path="_posts/2022-03-28-jekyll-plugin-template-collection.html"
-page.url="/blog/2022/03/28/jekyll-plugin-template-collection.html"
-```
-
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies.
@@ -143,7 +101,7 @@ $ gem info jekyll_plugin_pdf
 *** LOCAL GEMS ***
 
 jekyll_plugin_pdf (0.1.0)
-    Author: Firstname Lastname
+    Author: Mike Slinn
     Homepage:
     https://github.com/username/jekyll_plugin_pdf
     License: MIT
