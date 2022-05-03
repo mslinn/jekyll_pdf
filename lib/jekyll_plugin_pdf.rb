@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'wicked_pdf'
+require 'hexapdf'
 require_relative "jekyll_plugin_pdf/version"
 
 # Inspired by the badly broken example on https://jekyllrb.com/docs/plugins/generators/, and completely redone so it works.
@@ -12,6 +12,7 @@ module JekyllPluginPdf
     @logger ||= PluginMetaLogger.instance.new_logger(self, PluginMetaLogger.instance.config)
     @logger.info { "JekyllPluginPdf invoked." }
 
+    pdf = HexaPDF::Document.new
     site.pages.each do |page|
       # create a pdf from string using templates, layouts and content option for header or footer
       pdf = WickedPdf.new.pdf_from_string(

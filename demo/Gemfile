@@ -17,7 +17,7 @@ group :jekyll_plugins do
   gem 'jekyll-assets'
   gem 'jekyll-environment-variables'
   gem "jekyll_plugin_logger"
-  gem 'jekyll_plugin_pdf'
+  gem 'jekyll_plugin_pdf', path: "../"
   gem 'jekyll-sort'
   gem 'jekyll-tagging'
   gem 'kramdown'

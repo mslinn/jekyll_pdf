@@ -5,7 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in jekyll_plugin_pdf.gemspec
 gemspec
 
-gem 'talk_like_a_pirate'
+gem 'hexapdf'
 
 gem "bundler", require: false
 gem 'debase', require: false
