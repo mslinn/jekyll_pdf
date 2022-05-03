@@ -39,8 +39,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "shellwords"
   spec.add_dependency 'wicked_pdf', '~> 2.1'
 
-  spec.add_development_dependency "debase"
-  spec.add_development_dependency "ruby-debug-ide"
+  # spec.add_development_dependency "debase"
+  # spec.add_development_dependency "ruby-debug-ide"
   spec.add_development_dependency 'wkhtmltopdf-binary'
 end
 # rubocop:enable Metrics/BlockLength
